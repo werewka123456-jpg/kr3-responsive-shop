@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин — главная страница.">
+  <title>SOUNDHUB</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">SOUNDHUB</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="vinyl.html">Винил</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="headphones.html">Наушники</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="players.html">Плееры</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+      <main>
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__image-wrapper">
+          <img src="images/Logo.PNG" alt="Логотип SOUNDHUB" class="hero__image">
+        </div>
+      </div>
+    </section>
+
+    <div class="hero__text">
+          <h1>О нашем магазине</h1>
+          <p style="text-align: center;"> Добро пожаловать в <strong>SOUNDHUB</strong>!</p>
+          <p>Мы — команда энтузиастов, которая обожает качественную музыку и технику.</p>
+          <p>В нашем ассортименте вы найдете лучшие портативные колонки, профессиональные наушники, мощные ноутбуки и даже виниловые пластинки для настоящих ценителей аналогового звука. Мы тщательно отбираем каждый товар, чтобы вы получали только самое лучшее.</p>
+          <p>Наша миссия — делать технологии и музыку доступными и приятными в использовании каждый день.</p>
+          
+          <div class="hero__actions">
+            <a href="catalog.html" class="button button--primary">Перейти в каталог</a>
+            <a href="vinyl.html" class="button button--secondary">Смотреть винил</a>
+            <a href="headphones.html" class="button button--secondary">Смотреть наушники</a>
+            <a href="players.html" class="button button--secondary">Смотреть плееры</a>
+          </div>
+
+    <!-- Блок преимуществ -->
+    <section class="section">
+      <h1 style="text-align: center; margin-top: 60px; margin-bottom: 40px;">Почему выбирают нас?</h1>  <div class="features-grid">
+        <div class="feature-card">
+          <h3>Быстрая доставка</h3>
+          <p>Отправляем заказы в день покупки. По городу — курьером за пару часов.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Гарантия качества</h3>
+          <p>Только оригинальные товары от проверенных производителей.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Для меломанов</h3>
+          <p>Поможем подобрать идеальное звучание для вашего дома или студии.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+
+</body>
+</html>
