@@ -1,0 +1,133 @@
+/*базовые правила для мобилок*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden; /*Запрет горизонтального скролла*/
+}
+
+/*адаптация контейнеров*/
+.site-header__inner,
+.hero,
+.section {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 24px;
+}
+
+/*Адаптация меню для телефона в столбик*/
+.site-nav__list {
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 12px 16px;
+}
+
+/*Адаптация Hero-блока*/
+.hero__content {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero__text h1 {
+  font-size: clamp(28px, 7vw, 56px);
+  line-height: 1.1;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/*адаптация сетки карточек*/
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка на телефоне */
+  gap: 16px;
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/*адаптация формы*/
+.order-form {
+  display: grid;
+  gap: 16px;
+}
+
+.order-form__field {
+  display: grid;
+  gap: 8px;
+}
+
+.order-form__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px;
+}
+
+/*адаптация таблицы*/
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+/* =========================================
+   МЕДИАЗАПРОСЫ
+   ========================================= */
+
+/*Планшетики*/
+@media (min-width: 768px) {
+  .site-nav__list {
+    flex-direction: row; /* Меню в строку */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 карточки */
+  }
+
+  .order-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Форма в 2 колонки */
+  }
+}
+
+/*компуктеры*/
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 карточки */
+  }
+
+  .catalog-layout {
+    grid-template-columns: 260px minmax(0, 1fr); /* Фильтр слева */
+    align-items: start;
+  }
+}
