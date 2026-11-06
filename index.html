@@ -6,14 +6,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Учебный интернет-магазин — главная страница.">
-  <title>SOUNDHUB</title>
+  <meta name="description" content="SOUNDHUB — учебный интернет-магазин техники и музыки.">
+  <title>SOUNDHUB — Главная</title>
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
-
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">SOUNDHUB</a>
@@ -23,30 +23,30 @@
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="vinyl.html">Винил</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="headphones.html">Наушники</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="players.html">Плееры</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="players.html">Плееры</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
-      <main>
+    
     <section class="hero">
       <div class="hero__content">
         <div class="hero__image-wrapper">
-          <img src="images/Logo.PNG" alt="Логотип SOUNDHUB" class="hero__image">
+          <!-- Используем picture для адаптивности картинок (как требует методичка) -->
+          <picture>
+            <source media="(min-width: 1024px)" srcset="images/Logo.PNG">
+            <img src="images/Logo.PNG" alt="Логотип SOUNDHUB" class="hero__image">
+          </picture>
         </div>
-      </div>
-    </section>
-
-    <div class="hero__text">
+        
+        <div class="hero__text">
           <h1>О нашем магазине</h1>
-          <p style="text-align: center;"> Добро пожаловать в <strong>SOUNDHUB</strong>!</p>
+          <p>Добро пожаловать в <strong>SOUNDHUB</strong>!</p>
           <p>Мы — команда энтузиастов, которая обожает качественную музыку и технику.</p>
-          <p>В нашем ассортименте вы найдете лучшие портативные колонки, профессиональные наушники, мощные ноутбуки и даже виниловые пластинки для настоящих ценителей аналогового звука. Мы тщательно отбираем каждый товар, чтобы вы получали только самое лучшее.</p>
-          <p>Наша миссия — делать технологии и музыку доступными и приятными в использовании каждый день.</p>
+          <p>В нашем ассортименте вы найдете лучшие портативные колонки, профессиональные наушники, мощные ноутбуки и даже виниловые пластинки для настоящих ценителей аналогового звука.</p>
           
           <div class="hero__actions">
             <a href="catalog.html" class="button button--primary">Перейти в каталог</a>
@@ -54,10 +54,13 @@
             <a href="headphones.html" class="button button--secondary">Смотреть наушники</a>
             <a href="players.html" class="button button--secondary">Смотреть плееры</a>
           </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Блок преимуществ -->
     <section class="section">
-      <h1 style="text-align: center; margin-top: 60px; margin-bottom: 40px;">Почему выбирают нас?</h1>  <div class="features-grid">
+      <h1>Почему выбирают нас?</h1>
+      <div class="features-grid">
         <div class="feature-card">
           <h3>Быстрая доставка</h3>
           <p>Отправляем заказы в день покупки. По городу — курьером за пару часов.</p>
@@ -72,7 +75,7 @@
         </div>
       </div>
     </section>
-  </main>
+
   </main>
 
   <footer class="site-footer">
