@@ -84,3 +84,47 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* =========================================
+   Карточное представление таблицы на мобильном
+   ========================================= */
+@media (max-width: 767px) {
+  /* Скрываем шапку таблицы на телефоне */
+  .product-table thead {
+    display: none;
+  }
+
+  /* Каждую строку делаем карточкой */
+  .product-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-surface-accent);
+    padding: 10px;
+  }
+
+  /* Ячейки ставим друг под другом */
+  .product-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--color-border);
+    text-align: right;
+  }
+
+  /* Убираем границу у последней ячейки в карточке */
+  .product-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Добавляем название характеристики перед значением */
+  .product-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    color: var(--color-primary);
+    margin-right: 16px;
+  }
+}
