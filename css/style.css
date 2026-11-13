@@ -269,22 +269,6 @@ a:focus-visible {
   margin-bottom: var(--space-sm);
 }
 
-/* Адаптация под телефоны */
-@media (max-width: 768px) {
-  .hero__content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .hero__actions {
-    justify-content: center;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* --- Карточка товара --- */
 .product-card {
   display: flex;
@@ -463,9 +447,9 @@ a:focus-visible {
   margin-left: 5px;
 }
 
-/* Увеличиваем заголовок товара (h1 внутри блока с товаром) */
+/* Увеличиваем заголовок товара */
 .product-detail__info h1 {
-  font-size: 3.2rem; /* Делаем шрифт больше */
+  font-size: 3.2rem;
   margin-top: 0;     /* Убираем лишний отступ сверху */
   margin-bottom: var(--space-md);
 }
